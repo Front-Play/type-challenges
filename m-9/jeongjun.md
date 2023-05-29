@@ -31,4 +31,4 @@ type DeepReadonly<T> = {
 
 ### Reference
 
-- [typechallenges - 문제 해답(issues#187)](https://github.com/type-challenges/type-challenges/issues/187)
+- [typechallenges - 문제 해답(issues#52)](https://github.com/type-challenges/type-challenges/issues/52)
