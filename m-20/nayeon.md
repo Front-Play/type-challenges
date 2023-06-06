@@ -1,2 +1,3 @@
-type whitespace = ' ' | '\t' | '\n'
-type TrimLeft<S extends string> = S extends `${whitespace}${infer K}` ? TrimLeft<K> : S
+declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
+[key in keyof T]: Awaited<T[key]>
+}>

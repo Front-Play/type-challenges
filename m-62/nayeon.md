@@ -1,3 +1,1 @@
-declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
-[key in keyof T]: Awaited<T[key]>
-}>
+type LookUp<U, T> = U extends { type: T } ? U : never;
