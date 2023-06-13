@@ -17,14 +17,14 @@ type DeepReadonly<T> = { readonly [P in keyof T]: T[P] };
 
 ## 정답 풀이
 
-```
+```ts
 type DeepReadonly<T> = {
   readonly [k in keyof T]: T[k] extends Record<any, any>
     ? T[k] extends Function
       ? T[k]
       : DeepReadonly<T[k]>
     : T[k]
-}
+};
 ```
 
 <br/>
