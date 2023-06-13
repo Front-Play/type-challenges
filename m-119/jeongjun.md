@@ -14,6 +14,8 @@ type ReplaceAll<S extends string, From extends string, To extends string> =
 - 바로 직전 문제처럼 `From extends '' ? S : ~~`의 경우를 세팅하며 접근
 - 이 이후에 `:`뒤를 어떻게 작성해야 할까?
 
+<br/>
+
 ## 정답 풀이
 
 ```ts
