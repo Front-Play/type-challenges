@@ -32,8 +32,17 @@ type Flatten<T> = T extends []
     : [T]
 ```
 
+- 먼저 `T`가 **빈 배열일 경우**를 먼저 제시, 이 경우엔 그대로 `[]` 반환
+  -  빈 배열이 아닐 경우 아래의 삼항 연산자 실행
+- `T`가 **원소를 지닌 배열을 확장할 때**를 제시하기 위해 `infer`연산자 사용: 첫번째 원소를 `First`로, 나머지는 `...infer Rest`로 작성
+- 이러한 각 값들은 다시 반환할 배열 안(`[...Flatten<First>, ...Flatten<Rest>]`)에서 `Flatten<T>`안에 넣어 재귀적으로 실행
+  - `First`가 배열 형태의 원소더라도 재귀문 앞에 붙은 `...`라는 전개 연산자 덕에 다차원 배열일 경우 `[]`가 벗겨짐
+  - 다차원 배열이더라도 재귀문 덕에 모두 벗겨질 때까지 진행(배열 형태가 아닐 때까지 진행된 후 `First`를 `[First]`로 만든 뒤 전개구문을 통해 최종적으로 마지막 배열까지 벗겨내기 때문)
+  - `Rest`의 경우 원소가 여러개라면 다시 `First`와 `Rest`로 나눠서 위와 같이 진행
+- 만약 처음부터 배열의 형태가 아닐 경우엔 `T`를 배열로 감싸서 `[T]`로 반환
+
 <br/>
 
 ### Reference
 
-- [typechallenges - 문제 해답(issues#)]()
+- [typechallenges - 문제 해답(issues#511)](https://github.com/type-challenges/type-challenges/issues/511)
