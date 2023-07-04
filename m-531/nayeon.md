@@ -6,6 +6,6 @@ type Join<T extends any[], U extends string | number> = T extends [infer F, ...i
 
 <!-- 531 -->
 
-type StrintToUnion<T extends string> = T extends `${infer Letter}${infer Rest}`
-? Letter | StrintToUnion<Rest>
+type StringToUnion<T extends string> = T extends `${infer Letter}${infer Rest}`
+? Letter | StringToUnion<Rest>
 : never;
