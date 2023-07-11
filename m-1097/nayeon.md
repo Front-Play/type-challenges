@@ -8,3 +8,7 @@ type C = IsNever<null>; // expected to be false
 type D = IsNever<[]>; // expected to be false
 type E = IsNever<number>; // expected to be false
 ```
+
+```ts
+type IsUnion<T, B = T> = T extends B ? ([B] extends [T] ? false : true) : never;
+```
