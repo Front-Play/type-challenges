@@ -1,0 +1,19 @@
+## medium난이도 - TypeChallenges 2257번: MinusOne
+
+[💻문제 보기](https://www.typescriptlang.org/play?#code/PQKgUABBBM0KwHYIFoIFkCWA7ArgZwHksBTSFZCysgIwE918AXAQwDMB7CAMWYwC8IACgACrZrT6SAtgEoIAYinEAJhhxSFU5owAWYMvMMQAijmJ5GGdln1QA4hgBuxLBGYRcU6sQBOQ5gA2AO7ieBAADux4GJbOcsxh7oy04cQAdBAAmuw4fsmpEHg6OQHKED7EjLmuusQe6t5+ysQAxhUJKhB0ENbpttzsfsQAHsxS4QHEAFz9AAbzjHhk+XUAWr6cALzo2PhExAA8AIwAfBDAwBAADMspdVwYrMlcOX7bmLiEJAdwcGcXEDgABYyPNZv0zgA1DDEII9VwORgACRw1CmEB0jEY4TwUwuixaOjSACs8GlBgBzYCwRBgEDAfSgCAAfVZbPZbKyrwgAGF2M0IEjfHUOaLWRB6foVjtPvsDgAVCAjRguZRhTyNM7bZhYWiMkAssUciDy8yMXkdMJG42SjDjQbm6UAbwgAFEAI44QIAGjdw1SLXNAF8IKwfOwNAByYQrZCEwKTLAU8zAHCWAJ4SNSu4QFqWiDbADaZFd-tajAOHq9AQOHz231OvquJxO3pLZcDlc9gVruy+h1+rcBQJbbagpYDFarPbr-YOAGYh9BR+3J13q73ZQ2rs3fQBOPcr8cdqfdmuzuVHI5XRsQK87o9+tfT899uW7lCnVur8vrmdv7492ZHcEGZI4D2ZeAgWZBAgSuZkD2XfdgKuUDwKAqCYLghC9y-NsAF19UNa1xS4XJaj8ABlFUcWIkiJQZUAyDOSidGYCoIFobk8HYAI0ysLBcQxLEcTxYACSJUlyR8KkaQQYAdTwIJfGYiBoVhQpeP46whMxbFcXxPBCRJMlKWpeB5J4vjLB01S0EGOoeTYgJE2TXSRIM8SjMk0yZLpBkgA)
+
+<br/>
+
+## 정답 풀이
+
+```ts
+
+```
+
+- 설명
+
+<br/>
+
+### Reference
+
+- [typechallenges - 문제 해답(issues#)]()
