@@ -1,0 +1,17 @@
+제네릭 인자에서 Index Signature 부분만 제거하는 유틸리티다.
+키(k)가 string, number, symbol 등 Index Signature를 포함하면 never를 아니면 키 자체를 키값으로 사용한다.
+값은 T[k] 그대로 사용하면 된다.
+
+```ts
+type RemoveIndexSignature<T> = {
+  [k in keyof T as string extends k
+    ? never
+    : number extends k
+    ? never
+    : symbol extends k
+    ? never
+    : k]: T[k];
+};
+```
+
+[플레이그라운드확인](https://www.typescriptlang.org/play?#code/PQKgUABBCMDMBsB2CBaCAlApgWwPYDdMIBJAOwBNMAPCAZQEsBzUgQwBcBXAJ00lRQGC+AIwCeEABb0uuUSwj16ALw4BreQAoAAlJlzFK9QEoIAYkAvPYFbFs7mEArTAGM2KVZlEBnMH1O+IgCcnADm7vKEBcGsAWmYhAAnHAVDXABdHAHEGIQA9xwEdmwBKhiEAdocAP2sAJpsAMmcAfTohAHAnADzHADVXAFKaIAAMsPEIySioGZnZuTAAeABUAPjqSwBtawBA1ysAOQcAUsZCIQAgxrIAuWbrVti8oNlEAByIAMVxcCABeCABvPigAbTdRRYgPNi56UkYAXXuWUlFLiAAzQ4aIz3fC4ejkPgAX1mW12EAAgicMDgCJgWtR2qxODxugdcP0IMBgBBqLtnJhyOd-oDgRBQeCINCoKs6rMCQBxehsAASHGEiQg5kADHX3CRsNjbDyLInrRwSAB0dg88twXEYwDgSGAqlwYBAwG8oAgAH1TWbzWaIIAb0aFcQggBV5wA7LRBAKHjgFIOk0Wr3GiD67ywoiNVHotpMLFdPoE04Xa6qBSkCC3XB-CC9CAsDwPJ4vRgkqhsTAUTOqX4AfggpEwhC4v3upA42GEmC4eYLRcTZYrVebtYeokbuAANq3C+Ri53K9Xe6oPqmbm8ANxgSFLsBG71eiCAGUX0oAOpYggAB5wAu45kNxbfQb6Nhtqq2BAA1SAKIARw4LEHABoII+qGS75D-hkbAIAAci0AMUDld9B0LRhMA8YAODYehBw8ED-R2fZDiRGMIBudx7keZ5XlnL4figAFcCBEEwQhaEwAfAAhFgW2jPh8LuCsGybLhSO+EQWOoulaL4AAGQjs1eZdvEcXBSEealbBYpFaH7YQhw0EDKOEFiQKMBjMIgPFmNY852NuQi1KHPjyLw7SWLeIT6TojC4WYpQcIErgnJEqAdKUCTiMYaSDLhRwM3gpErj4H8-26F830Hbog2aCgMTDTocTxfovzORSfIZSF+hymLfycNh4tfd9kpRVLWkxTKehMnKqR07zaWchcIHErMgsZYqP1KuKEuqlK0TS0MOmxHpjJYlq8quezeIKykipKqBYvKyrEpqppxvqjLpu6dz5ogNqVq6-zApzfqSreQ0QE9M9TQgQATpsAGXGIEAC6bABGap7novNdwCgAlAFQJwBXpogQBXmqiSoRUkcVJWlYBZQVJUVTVDUEEQYAvg8AB3ZttV1EGIAhwV4bFCUpRlDw5UVZVVXVTUcY8IckPoOSNggAlXsAD06IECUpABOW0VEZplG6bRxnMZ1PUDSAA)
